@@ -27,6 +27,7 @@ public class Craft {
         Enchanted_two_apple(); //1.0.0_pre-alpha_2 -> changed 1.0.0_pre-alpha_4 = sl
         Experience_bottle(); //1.0.0_pre-alpha_2
         Horse_armors(); //1.0.0_pre-alpha_4
+        Lava_stone_bucket(); //1.0.0
         Name_tag(); //1.0.0 = sl
         Snow_ball(); //1.0.0_pre-alpha_4 = sl
         String(); //1.0.0_pre-alpha_4 = sl
@@ -101,6 +102,33 @@ public class Craft {
         iron_horse_armor.addIngredient(Material.LEATHER_HORSE_ARMOR);
         iron_horse_armor.addIngredient(Material.IRON_INGOT);
         Bukkit.addRecipe(iron_horse_armor);
+    }
+
+    public static void Lava_stone_bucket() {
+        ItemStack stone_bucket = new ItemStack(Material.BUCKET);
+        ItemMeta stone_bucket_meta = stone_bucket.getItemMeta();
+        stone_bucket_meta.setDisplayName(ChatColor.GREEN+""+ChatColor.BOLD+"石頭桶");
+        stone_bucket_meta.setLore(List.of(ChatColor.LIGHT_PURPLE+"裝著石頭的桶子","聽說拿去熔爐燒就會變成熔岩喔","記得是熔爐不是高爐"));
+        stone_bucket.setItemMeta(stone_bucket_meta);
+        ShapelessRecipe stone_bucket_rec = new ShapelessRecipe(NamespacedKey.minecraft("stone_bucket"),stone_bucket);
+        stone_bucket_rec.addIngredient(Material.STONE);
+        stone_bucket_rec.addIngredient(Material.BUCKET);
+        Bukkit.addRecipe(stone_bucket_rec);
+
+        //lava
+        FurnaceRecipe lava_bucket_rec = new FurnaceRecipe(NamespacedKey.minecraft("lava_bucket"), new ItemStack(Material.LAVA_BUCKET),
+                new RecipeChoice.ExactChoice(stone_bucket), 50.0f, 60*20);
+        Bukkit.addRecipe(lava_bucket_rec);
+        //wrong use
+
+        ItemStack failed_lava = new ItemStack(Material.RAW_IRON,2);
+        ItemMeta failed_lava_meta = failed_lava.getItemMeta();
+        failed_lava_meta.setDisplayName(ChatColor.DARK_GRAY+""+ChatColor.BOLD+"廢鐵");
+        failed_lava_meta.setLore(List.of(ChatColor.RED+"你不小心用錯爐子","桶子融化造成熔煉失敗","現在只剩這堆廢鐵"));
+        failed_lava.setItemMeta(failed_lava_meta);
+        BlastingRecipe lava_failed_rec = new BlastingRecipe(NamespacedKey.minecraft("lava_failed"), failed_lava,
+                new RecipeChoice.ExactChoice(stone_bucket), 1.0f, 10*20);
+        Bukkit.addRecipe(lava_failed_rec);
     }
 
     public static void Name_tag() {
