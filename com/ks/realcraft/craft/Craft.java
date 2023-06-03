@@ -11,6 +11,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.inventory.*;
 import org.bukkit.inventory.meta.ItemMeta;
 
@@ -19,19 +20,49 @@ import java.util.List;
 
 public class Craft {
 
-    public static void init(){ create_recipes(); }
+    public static void init(FileConfiguration config){
+        boolean rare_things = config.getBoolean("Rare");
+        boolean back_things = config.getBoolean("Back");
+        boolean useful_things = config.getBoolean("Useful");
+        boolean fun_things = config.getBoolean("Fun");
+        boolean bucket_things = config.getBoolean("Bucket");
 
-    public static void create_recipes() { //sl = shapeless
+        if (rare_things) rare();
+        if (back_things) back();
+        if (useful_things) useful();
+        if (fun_things) fun();
+        if (bucket_things) bucket();
+        }
 
-        Diamond_fool(); //1.0.0_pre-alpha_4
+    public static void rare(){
         Enchanted_two_apple(); //1.0.0_pre-alpha_2 -> changed 1.0.0_pre-alpha_4 = sl
         Experience_bottle(); //1.0.0_pre-alpha_2
         Horse_armors(); //1.0.0_pre-alpha_4
-        Lava_stone_bucket(); //1.0.0
         Name_tag(); //1.0.0 = sl
+    }
+
+    public static void back(){
         Snow_ball(); //1.0.0_pre-alpha_4 = sl
         String(); //1.0.0_pre-alpha_4 = sl
     }
+
+    public static void useful(){
+        Lava_stone_bucket(); //1.0.0
+    }
+
+    public static void fun() { //sl = shapeless
+        Diamond_fool(); //1.0.0_pre-alpha_4
+    }
+
+    public static void bucket(){
+        Salmon_bucket();
+        Tadpole_bucket();
+        Tropical_fish_bucket();
+        Puffer_fish_bucket();
+    }
+
+
+
 
     public static void Diamond_fool() {
         ItemStack fooled_diamond = new ItemStack(Material.COAL);
@@ -138,6 +169,13 @@ public class Craft {
         Bukkit.addRecipe(name_tag);
     }
 
+    public static void Salmon_bucket() {
+        ShapelessRecipe salmon_bucket_rec = new ShapelessRecipe(NamespacedKey.minecraft("salmon_bucket"), new ItemStack(Material.SALMON_BUCKET));
+        salmon_bucket_rec.addIngredient(Material.SALMON_SPAWN_EGG);
+        salmon_bucket_rec.addIngredient(Material.WATER_BUCKET);
+        Bukkit.addRecipe(salmon_bucket_rec);
+    }
+
     public static void Snow_ball() {
         ShapelessRecipe snow_ball_rec = new ShapelessRecipe(NamespacedKey.minecraft("snow_ball"), new ItemStack(Material.SNOWBALL,4));
         snow_ball_rec.addIngredient(Material.SNOW_BLOCK);
@@ -148,6 +186,27 @@ public class Craft {
         ShapelessRecipe string_rec = new ShapelessRecipe(NamespacedKey.minecraft("string"), new ItemStack(Material.STRING,4));
         string_rec.addIngredient(Material.WHITE_WOOL);
         Bukkit.addRecipe(string_rec);
+    }
+
+    public static void Tadpole_bucket() {
+        ShapelessRecipe tadpole_bucket_rec = new ShapelessRecipe(NamespacedKey.minecraft("tadpole_bucket"), new ItemStack(Material.TADPOLE_BUCKET));
+        tadpole_bucket_rec.addIngredient(Material.TADPOLE_SPAWN_EGG);
+        tadpole_bucket_rec.addIngredient(Material.WATER_BUCKET);
+        Bukkit.addRecipe(tadpole_bucket_rec);
+    }
+
+    public static void Tropical_fish_bucket() {
+        ShapelessRecipe tropical_fish_bucket_rec = new ShapelessRecipe(NamespacedKey.minecraft("tropical_fish_bucket"), new ItemStack(Material.TROPICAL_FISH_BUCKET));
+        tropical_fish_bucket_rec.addIngredient(Material.TROPICAL_FISH_SPAWN_EGG);
+        tropical_fish_bucket_rec.addIngredient(Material.WATER_BUCKET);
+        Bukkit.addRecipe(tropical_fish_bucket_rec);
+    }
+
+    public static void Puffer_fish_bucket() {
+        ShapelessRecipe puffer_fish_bucket_rec = new ShapelessRecipe(NamespacedKey.minecraft("puffer_fish_bucket"), new ItemStack(Material.PUFFERFISH_BUCKET));
+        puffer_fish_bucket_rec.addIngredient(Material.PUFFERFISH_SPAWN_EGG);
+        puffer_fish_bucket_rec.addIngredient(Material.WATER_BUCKET);
+        Bukkit.addRecipe(puffer_fish_bucket_rec);
     }
 
 }

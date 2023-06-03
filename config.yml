@@ -1,0 +1,26 @@
+#Rare is rare item, includes
+#     Enchanted_two_apple
+#     Experience_bottle
+#     Horse_armors
+#     Name_tag
+Rare: true
+
+#Back is crafting backward, includes
+#     Snow_ball
+#     String
+Back: true
+
+#Useful is things that is useful, includes
+#     lava_bucket
+Useful: true
+
+#Fun is something that fools people, includes
+#     diamond_fool (burn diamond into coal)
+Fun: true
+
+#Bucket is mob in bucket, includes
+#     Salmon_bucket
+#     Tadpole_bucket
+#     Tropical_fish_bucket
+#     Puffer_fish_bucket
+Bucket: false

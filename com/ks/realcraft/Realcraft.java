@@ -8,8 +8,11 @@ public class Realcraft extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        getConfig().options().copyDefaults();
+        saveDefaultConfig();
+
         getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE+"Adding Recipes");
-        Craft.init();
+        Craft.init(getConfig());
         getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE+"DONE Adding Recipes");
         getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "[RealCraft] Real Craft is enabled.");
         getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "[RealCraft]-----------------------");
