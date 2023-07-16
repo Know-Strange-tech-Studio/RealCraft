@@ -24,3 +24,5 @@ Fun: true
 #     Tropical_fish_bucket
 #     Puffer_fish_bucket
 Bucket: false
+
+spawn:

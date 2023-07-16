@@ -13,6 +13,11 @@ public class Realcraft extends JavaPlugin {
 
         getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE+"Adding Recipes");
         Craft.init(getConfig());
+
+        /*getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE+"Adding Command");
+        getCommand("setspawn").setExecutor(new SetWorldSpawn(this));
+        getCommand("spawn").setExecutor(new Spawn(this));*/
+
         getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE+"DONE Adding Recipes");
         getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "[RealCraft] Real Craft is enabled.");
         getServer().getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "[RealCraft]-----------------------");

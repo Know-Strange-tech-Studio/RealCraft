@@ -39,6 +39,7 @@ public class Craft {
         Experience_bottle(); //1.0.0_pre-alpha_2
         Horse_armors(); //1.0.0_pre-alpha_4
         Name_tag(); //1.0.0 = sl
+        Netherite_upgrade();//1.0.3
     }
 
     public static void back(){
@@ -48,10 +49,12 @@ public class Craft {
 
     public static void useful(){
         Lava_stone_bucket(); //1.0.0
+        Powder_snow_bucket();//1.0.3
     }
 
     public static void fun() { //sl = shapeless
         Diamond_fool(); //1.0.0_pre-alpha_4
+
     }
 
     public static void bucket(){
@@ -70,10 +73,10 @@ public class Craft {
         fooled_diamond_meta.setLore(List.of(ChatColor.LIGHT_PURPLE+"難道你不知道鑽石是由碳組成的嗎","你看他都失去價值了"));
         fooled_diamond.setItemMeta(fooled_diamond_meta);
 
-        FurnaceRecipe diamond_fool_f = new FurnaceRecipe(NamespacedKey.minecraft("diamond_fool_f"), fooled_diamond,
+        FurnaceRecipe diamond_fool_f = new FurnaceRecipe(NamespacedKey.minecraft("diamond_fool_furnace"), fooled_diamond,
                 Material.DIAMOND, 0.0f, 20);
         Bukkit.addRecipe(diamond_fool_f);
-        BlastingRecipe diamond_fool_b = new BlastingRecipe(NamespacedKey.minecraft("diamond_fool_b"), fooled_diamond,
+        BlastingRecipe diamond_fool_b = new BlastingRecipe(NamespacedKey.minecraft("diamond_fool_blast"), fooled_diamond,
                 Material.DIAMOND, 0.0f, 20);
         Bukkit.addRecipe(diamond_fool_b);
     }
@@ -169,6 +172,14 @@ public class Craft {
         Bukkit.addRecipe(name_tag);
     }
 
+    public static void Netherite_upgrade() {
+        ShapedRecipe netherite_upgrade = new ShapedRecipe(NamespacedKey.minecraft("netherite_upgrade"), new ItemStack(Material.NETHERITE_UPGRADE_SMITHING_TEMPLATE));
+        netherite_upgrade.shape("###","#*#","###");
+        netherite_upgrade.setIngredient('#',Material.NETHERRACK);
+        netherite_upgrade.setIngredient('*',Material.NETHERITE_SCRAP);
+        Bukkit.addRecipe(netherite_upgrade);
+    }
+
     public static void Salmon_bucket() {
         ShapelessRecipe salmon_bucket_rec = new ShapelessRecipe(NamespacedKey.minecraft("salmon_bucket"), new ItemStack(Material.SALMON_BUCKET));
         salmon_bucket_rec.addIngredient(Material.SALMON_SPAWN_EGG);
@@ -200,6 +211,13 @@ public class Craft {
         tropical_fish_bucket_rec.addIngredient(Material.TROPICAL_FISH_SPAWN_EGG);
         tropical_fish_bucket_rec.addIngredient(Material.WATER_BUCKET);
         Bukkit.addRecipe(tropical_fish_bucket_rec);
+    }
+
+    public static void Powder_snow_bucket() {
+        ShapelessRecipe powder_snow_bucket = new ShapelessRecipe(NamespacedKey.minecraft("powder_snow_bucket"), new ItemStack(Material.POWDER_SNOW_BUCKET));
+        powder_snow_bucket.addIngredient(Material.BUCKET);
+        powder_snow_bucket.addIngredient(Material.SNOW_BLOCK);
+        Bukkit.addRecipe(powder_snow_bucket);
     }
 
     public static void Puffer_fish_bucket() {
