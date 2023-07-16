@@ -20,7 +20,9 @@
 ![鑽](https://upload.cc/i1/2023/04/28/RnuhHv.png "工作台配方")  
 
 ### 命名牌 name tag
-![命名牌](https://upload.cc/i1/2023/04/28/cHOzsq.png "工作台配方")
+![命名牌](https://upload.cc/i1/2023/04/28/cHOzsq.png "工作台配方")  
+### 獄髓升級模板 netherite upgrade smithing templete
+![獄髓](https://upload.cc/i1/2023/07/16/VARfYZ.png)
 ### 雪球 snow ball
 ![雪球](https://upload.cc/i1/2023/04/28/61NznM.png)  
 ### 石頭桶 stone bucket
@@ -28,7 +30,8 @@
 ![石頭桶](https://upload.cc/i1/2023/04/03/u78pH9.png "工作台配方")  
 ### 線 string
 ![線](https://upload.cc/i1/2023/04/28/elbw37.png)  
-
+### 粉雪桶 powder snow bucket
+![粉雪桶](https://upload.cc/i1/2023/07/16/q5wbZt.png)  
 
 
 ## 熔煉表(熔爐)
