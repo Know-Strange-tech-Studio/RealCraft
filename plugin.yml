@@ -3,8 +3,3 @@ version: 1.0.2-1.19.4
 author: Knowscratcher
 main: com.ks.realcraft.Realcraft
 api-version: 1.14
-commands:
-  setspawn:
-    description: set a spawn point for /spawn
-  spawn:
-    description: go to the spawn point you set in /setspawn

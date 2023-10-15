@@ -25,4 +25,6 @@ Fun: true
 #     Puffer_fish_bucket
 Bucket: false
 
-spawn:
+#Disc is music discs, includes
+#
+Disc: true

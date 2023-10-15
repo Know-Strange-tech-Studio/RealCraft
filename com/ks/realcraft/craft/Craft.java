@@ -12,9 +12,12 @@ import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.entity.Item;
 import org.bukkit.inventory.*;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.util.io.BukkitObjectInputStream;
 
+import javax.naming.Name;
 import java.util.List;
 
 
@@ -26,12 +29,14 @@ public class Craft {
         boolean useful_things = config.getBoolean("Useful");
         boolean fun_things = config.getBoolean("Fun");
         boolean bucket_things = config.getBoolean("Bucket");
+        boolean disc_things = config.getBoolean("Disc");
 
         if (rare_things) rare();
         if (back_things) back();
         if (useful_things) useful();
         if (fun_things) fun();
         if (bucket_things) bucket();
+        if (disc_things) disc();
         }
 
     public static void rare(){
@@ -64,8 +69,26 @@ public class Craft {
         Puffer_fish_bucket();
     }
 
+    public static void disc(){
+        Plastic(); //1.0.4
+        Disc_13(); //1.0.4
+        Disc_cat(); //1.0.4
+        Disc_block(); //1.0.4
+        Disc_chirp(); //1.0.4
+        Disc_far(); //1.0.4
+        Disc_mall(); //1.0.4
+        Disc_mellohi(); //1.0.4
+        Disc_stal(); //1.0.4
+        Disc_strad(); //1.0.4
+        Disc_ward(); //1.0.4
+        Disc_11(); //1.0.4
+        Disc_wait(); //1.0.4
+        Disc_pigstep(); //1.0.4
+        Disc_otherside(); //1.0.4
+        Disc_relic(); //1.0.4
+    }
 
-
+//recipe settings below
 
     public static void Diamond_fool() {
         ItemStack fooled_diamond = new ItemStack(Material.COAL);
@@ -86,6 +109,127 @@ public class Craft {
         diamond_horse_armor.addIngredient(Material.LEATHER_HORSE_ARMOR);
         diamond_horse_armor.addIngredient(Material.DIAMOND);
         Bukkit.addRecipe(diamond_horse_armor);
+    }
+
+    public static void Disc_13() {
+        ShapedRecipe disc_13 = new ShapedRecipe(NamespacedKey.minecraft("disc_13"),new ItemStack(Material.MUSIC_DISC_13));
+        disc_13.shape("###","#*#","###");
+        disc_13.setIngredient('#', new RecipeChoice.ExactChoice(plastic()));
+        disc_13.setIngredient('*', Material.IRON_INGOT);
+        Bukkit.addRecipe(disc_13);
+    }
+
+    public static void Disc_cat() {
+        ShapedRecipe disc_cat = new ShapedRecipe(NamespacedKey.minecraft("disc_cat"),new ItemStack(Material.MUSIC_DISC_CAT));
+        disc_cat.shape("###","#*#","###");
+        disc_cat.setIngredient('#', new RecipeChoice.ExactChoice(plastic()));
+        disc_cat.setIngredient('*', Material.EMERALD);
+        Bukkit.addRecipe(disc_cat);
+    }
+
+    public static void Disc_block() {
+        ShapedRecipe disc_block = new ShapedRecipe(NamespacedKey.minecraft("disc_block"),new ItemStack(Material.MUSIC_DISC_BLOCKS));
+        disc_block.shape("###","#*#","###");
+        disc_block.setIngredient('#', new RecipeChoice.ExactChoice(plastic()));
+        disc_block.setIngredient('*', Material.REDSTONE);
+        Bukkit.addRecipe(disc_block);
+    }
+
+    public static void Disc_chirp() {
+        ShapedRecipe disc_chirp = new ShapedRecipe(NamespacedKey.minecraft("disc_chirp"),new ItemStack(Material.MUSIC_DISC_CHIRP));
+        disc_chirp.shape("###","#*#","###");
+        disc_chirp.setIngredient('#', new RecipeChoice.ExactChoice(plastic()));
+        disc_chirp.setIngredient('*', Material.REDSTONE_BLOCK);
+        Bukkit.addRecipe(disc_chirp);
+    }
+
+    public static void Disc_far() {
+        ShapedRecipe disc_far = new ShapedRecipe(NamespacedKey.minecraft("disc_far"),new ItemStack(Material.MUSIC_DISC_FAR));
+        disc_far.shape("###","#*#","###");
+        disc_far.setIngredient('#', new RecipeChoice.ExactChoice(plastic()));
+        disc_far.setIngredient('*', Material.SLIME_BALL);
+        Bukkit.addRecipe(disc_far);
+    }
+
+    public static void Disc_mall() {
+        ShapedRecipe disc_mall = new ShapedRecipe(NamespacedKey.minecraft("disc_mall"),new ItemStack(Material.MUSIC_DISC_MALL));
+        disc_mall.shape("###","#*#","###");
+        disc_mall.setIngredient('#', new RecipeChoice.ExactChoice(plastic()));
+        disc_mall.setIngredient('*', Material.AMETHYST_SHARD);
+        Bukkit.addRecipe(disc_mall);
+    }
+
+    public static void Disc_mellohi() {
+        ShapedRecipe disc_mellohi = new ShapedRecipe(NamespacedKey.minecraft("disc_mellohi"),new ItemStack(Material.MUSIC_DISC_MELLOHI));
+        disc_mellohi.shape("###","#*#","###");
+        disc_mellohi.setIngredient('#', new RecipeChoice.ExactChoice(plastic()));
+        disc_mellohi.setIngredient('*', Material.QUARTZ);
+        Bukkit.addRecipe(disc_mellohi);
+    }
+
+    public static void Disc_stal() {
+        ShapedRecipe disc_stal = new ShapedRecipe(NamespacedKey.minecraft("disc_stal"),new ItemStack(Material.MUSIC_DISC_STAL));
+        disc_stal.shape("###","#*#","###");
+        disc_stal.setIngredient('#', new RecipeChoice.ExactChoice(plastic()));
+        disc_stal.setIngredient('*', Material.DEEPSLATE);
+        Bukkit.addRecipe(disc_stal);
+    }
+
+    public static void Disc_strad() {
+        ShapedRecipe disc_strad = new ShapedRecipe(NamespacedKey.minecraft("disc_strad"),new ItemStack(Material.MUSIC_DISC_STRAD));
+        disc_strad.shape("###","#*#","###");
+        disc_strad.setIngredient('#', new RecipeChoice.ExactChoice(plastic()));
+        disc_strad.setIngredient('*', Material.GLOWSTONE_DUST);
+        Bukkit.addRecipe(disc_strad);
+    }
+
+    public static void Disc_ward() {
+        ShapedRecipe disc_ward = new ShapedRecipe(NamespacedKey.minecraft("disc_ward"),new ItemStack(Material.MUSIC_DISC_WARD));
+        disc_ward.shape("###","#*#","###");
+        disc_ward.setIngredient('#', new RecipeChoice.ExactChoice(plastic()));
+        disc_ward.setIngredient('*', Material.LAPIS_LAZULI);
+        Bukkit.addRecipe(disc_ward);
+    }
+
+    public static void Disc_11() {
+        ShapedRecipe disc_11 = new ShapedRecipe(NamespacedKey.minecraft("disc_11"),new ItemStack(Material.MUSIC_DISC_11));
+        disc_11.shape("###","#*#","###");
+        disc_11.setIngredient('#', new RecipeChoice.ExactChoice(plastic()));
+        disc_11.setIngredient('*', Material.TNT);
+        Bukkit.addRecipe(disc_11);
+    }
+
+    public static void Disc_wait() {
+        ShapedRecipe disc_wait = new ShapedRecipe(NamespacedKey.minecraft("disc_wait"),new ItemStack(Material.MUSIC_DISC_WAIT));
+        disc_wait.shape("###","#*#","###");
+        disc_wait.setIngredient('#', new RecipeChoice.ExactChoice(plastic()));
+        disc_wait.setIngredient('*', Material.BLUE_ICE);
+        Bukkit.addRecipe(disc_wait);
+    }
+
+    public static void Disc_pigstep() {
+        ShapedRecipe disc_pigstep = new ShapedRecipe(NamespacedKey.minecraft("disc_pigstep"),new ItemStack(Material.MUSIC_DISC_PIGSTEP));
+        disc_pigstep.shape("###","$*$","###");
+        disc_pigstep.setIngredient('#', new RecipeChoice.ExactChoice(plastic()));
+        disc_pigstep.setIngredient('*', Material.GLOWSTONE_DUST);
+        disc_pigstep.setIngredient('$', Material.BRICK);
+        Bukkit.addRecipe(disc_pigstep);
+    }
+
+    public static void Disc_otherside() {
+        ShapedRecipe disc_otherside = new ShapedRecipe(NamespacedKey.minecraft("disc_otherside"),new ItemStack(Material.MUSIC_DISC_OTHERSIDE));
+        disc_otherside.shape("###","#*#","###");
+        disc_otherside.setIngredient('#', new RecipeChoice.ExactChoice(plastic()));
+        disc_otherside.setIngredient('*', Material.WARPED_PLANKS);
+        Bukkit.addRecipe(disc_otherside);
+    }
+
+    public static void Disc_relic() {
+        ShapedRecipe disc_relic = new ShapedRecipe(NamespacedKey.minecraft("disc_relic"),new ItemStack(Material.MUSIC_DISC_RELIC));
+        disc_relic.shape("###","#*#","###");
+        disc_relic.setIngredient('#', new RecipeChoice.ExactChoice(plastic()));
+        disc_relic.setIngredient('*', Material.SAND);
+        Bukkit.addRecipe(disc_relic);
     }
 
     public static void Enchanted_two_apple() {
@@ -211,6 +355,21 @@ public class Craft {
         tropical_fish_bucket_rec.addIngredient(Material.TROPICAL_FISH_SPAWN_EGG);
         tropical_fish_bucket_rec.addIngredient(Material.WATER_BUCKET);
         Bukkit.addRecipe(tropical_fish_bucket_rec);
+    }
+
+    public static ItemStack plastic(){ //item setting
+        ItemStack plastic = new ItemStack(Material.BLACK_DYE);
+        ItemMeta plastic_meta = plastic.getItemMeta();
+        plastic_meta.setDisplayName(ChatColor.LIGHT_PURPLE+"塑膠");
+        plastic.setItemMeta(plastic_meta);
+        return plastic;
+    }
+
+    public static void Plastic(){
+        ItemStack plastic = plastic();
+        FurnaceRecipe plastic_rec = new FurnaceRecipe(NamespacedKey.minecraft("plastic"),plastic,
+                Material.COAL,50f,30*20);
+        Bukkit.addRecipe(plastic_rec);
     }
 
     public static void Powder_snow_bucket() {
