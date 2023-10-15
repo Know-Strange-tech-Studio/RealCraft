@@ -14,6 +14,24 @@
 (3金蘋果->壓縮金蘋果)  
 **注意:不要吃或用他合成附魔金蘋果以外的物品**  
 ![金蘋果](https://upload.cc/i1/2023/04/03/Yydt4T.png "工作台配方")  
+
+### 唱片 discs
+![唱片](https://upload.cc/i1/2023/10/15/jhiItN.png "工作台配方")  
+![唱片](https://upload.cc/i1/2023/10/15/CcxQ4D.png "工作台配方")  
+![唱片](https://upload.cc/i1/2023/10/15/gmqG4i.png "工作台配方")  
+![唱片](https://upload.cc/i1/2023/10/15/N9OguM.png "工作台配方")  
+![唱片](https://upload.cc/i1/2023/10/15/nN5dGH.png "工作台配方")  
+![唱片](https://upload.cc/i1/2023/10/15/8WKZA9.png "工作台配方")  
+![唱片](https://upload.cc/i1/2023/10/15/meYRZS.png "工作台配方")  
+![唱片](https://upload.cc/i1/2023/10/15/2eD3dV.png "工作台配方")  
+![唱片](https://upload.cc/i1/2023/10/15/FoprEl.png "工作台配方")  
+![唱片](https://upload.cc/i1/2023/10/15/KDGYnF.png "工作台配方")  
+![唱片](https://upload.cc/i1/2023/10/15/tx6Yw5.png "工作台配方")  
+![唱片](https://upload.cc/i1/2023/10/15/Gojr9f.png "工作台配方")  
+![唱片](https://upload.cc/i1/2023/10/15/oU2EeN.png "工作台配方")  
+![唱片](https://upload.cc/i1/2023/10/15/o8MjXI.png "工作台配方")  
+![唱片](https://upload.cc/i1/2023/10/15/UKd52u.png "工作台配方")  
+
 ### 馬鎧 horse armors
 ![鐵](https://upload.cc/i1/2023/04/28/kanMDu.png "工作台配方")  
 ![金](https://upload.cc/i1/2023/04/28/8i5Mwq.png "工作台配方")  
@@ -41,6 +59,8 @@
 ![鑽石?](https://upload.cc/i1/2023/04/28/lye1AR.png "熔爐配方")  
 ### 熔岩桶 lava bucket (由[石頭桶](https://github.com/KnowScratcher/RealCraft#%E7%9F%B3%E9%A0%AD%E6%A1%B6-stone-bucket)煉製)
 ![熔岩桶](https://upload.cc/i1/2023/04/03/Zqac3L.png "熔爐配方")  
+### 塑膠 plastic
+![塑膠](https://upload.cc/i1/2023/10/15/lFd93m.png "熔爐配方")  
 
 ## 熔煉表(高爐)
 ### 鑽石? diamond fool!!!
